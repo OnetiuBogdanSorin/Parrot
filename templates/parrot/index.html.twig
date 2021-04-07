@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2>List of Parrots</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Species</td>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for parrot in parrots %}
+        <tr>
+            <td>{{ parrot.id }}</td>
+            <td>{{ parrot.species }}</td>
+            <td><a href="{{ path('parrot.show',{id: parrot.id}) }}"><button>Browse</button></a></td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

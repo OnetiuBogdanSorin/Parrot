@@ -1,0 +1,23 @@
+{%  extends 'base.html.twig'%}
+
+{% block body %}
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <td>Rase</td>
+        <td>Age</td>
+        <td>Sex</td>
+        <td>Colors</td>
+
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ parrot.species }}</td>
+            <td>{{ parrot.age }}</td>
+            <td>{{ parrot.sex }}</td>
+            <td>{{ parrot.color }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
