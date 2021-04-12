@@ -15,7 +15,7 @@
         {% for parrot in parrots %}
         <tr>
             <td>{{ parrot.id }}</td>
-            <td>{{ parrot.species }}</td>
+{#            <td>{{ parrot.species }}</td>#}
             <td><a href="{{ path('parrot.show',{id: parrot.id}) }}"><button>Browse</button></a></td>
 
         </tr>

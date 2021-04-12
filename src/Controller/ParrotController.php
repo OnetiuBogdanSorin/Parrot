@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ParrotController extends AbstractController
 {
     /**
-     * @Route("/showAll", name="showAll")
+     * @Route("/showAll", name="index")
      * @param ParrotRepository $parrotRepository
      * @return Response
      */

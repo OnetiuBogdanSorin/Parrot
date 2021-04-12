@@ -12,7 +12,6 @@
         {% endblock %}
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
     <body>
@@ -58,5 +57,7 @@
 
         {% endblock %}
     </div>
+    <script src="{{ asset('jquery.js') }}"></script>
+    <script src="{{ asset('app.js') }}"></script>
     </body>
 </html>

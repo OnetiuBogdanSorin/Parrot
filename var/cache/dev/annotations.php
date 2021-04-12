@@ -73,10 +73,6 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CParrot%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%23getId%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CParrot%23getId%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CParrot%23getSpecies%5D%5B1%5D' => 1,
-'%5B%5BC%5DApp%5CEntity%5CParrot%23getSpecies%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CParrot%23setSpecies%5D%5B1%5D' => 1,
-'%5B%5BC%5DApp%5CEntity%5CParrot%23setSpecies%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%23getColor%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CParrot%23getColor%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%23setColor%5D%5B1%5D' => 1,
@@ -89,16 +85,74 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CParrot%23getSex%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%23setSex%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CParrot%23setSex%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CParrot%23getSubspecie%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CParrot%23getSubspecie%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CParrot%23setSubspecie%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CParrot%23setSubspecie%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%24id%5D%5B1%5D' => 8,
 '%5B%5BC%5DApp%5CEntity%5CParrot%24id%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CParrot%24species%5D%5B1%5D' => 9,
-'%5B%5BC%5DApp%5CEntity%5CParrot%24species%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CParrot%24subspecie%5D%5B1%5D' => 9,
+'%5B%5BC%5DApp%5CEntity%5CParrot%24subspecie%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%24age%5D%5B1%5D' => 10,
 '%5B%5BC%5DApp%5CEntity%5CParrot%24age%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%24sex%5D%5B1%5D' => 10,
 '%5B%5BC%5DApp%5CEntity%5CParrot%24sex%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CParrot%24color%5D%5B1%5D' => 11,
 '%5B%5BC%5DApp%5CEntity%5CParrot%24color%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%5D%5B1%5D' => 12,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23__construct%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23__construct%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23getId%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23getId%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23getSpecies%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23getSpecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23setSpecies%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23setSpecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23__toString%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23__toString%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23getSubspecies%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23getSubspecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23addSubspecy%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23addSubspecy%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%23removeSubspecy%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%23removeSubspecy%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%24id%5D%5B1%5D' => 8,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%24id%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%24species%5D%5B1%5D' => 10,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%24species%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSpecies%24subspecies%5D%5B1%5D' => 13,
+'%5B%5BC%5DApp%5CEntity%5CSpecies%24subspecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%5D%5B1%5D' => 14,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23__construct%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23__construct%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23getId%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23getId%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23getSubspecies%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23getSubspecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23setSubspecies%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23setSubspecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23getParrot%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23getParrot%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23addParrot%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23addParrot%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23removeParrot%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23removeParrot%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23getSpecie%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23getSpecie%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23setSpecie%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23setSpecie%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%23__toString%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%23__toString%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%24id%5D%5B1%5D' => 8,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%24id%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%24subspecies%5D%5B1%5D' => 10,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%24subspecies%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%24parrot%5D%5B1%5D' => 15,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%24parrot%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CSubspecies%24specie%5D%5B1%5D' => 16,
+'%5B%5BC%5DApp%5CEntity%5CSubspecies%24specie%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23setContainer%5D%5B1%5D' => 1,
@@ -630,7 +684,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1616763845,
+2 => 1618227567,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -665,7 +719,7 @@ return [[
                     '/showAll',
                 ],
                 'name' => [
-                    'showAll',
+                    'index',
                 ],
             ],
         ],
@@ -764,21 +818,28 @@ return [[
 9 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
         ],
         null,
         [
             'stdClass' => [
                 'targetEntity' => [
-                    'App\\Entity\\Species',
+                    'App\\Entity\\Subspecies',
                 ],
                 'inversedBy' => [
                     'parrot',
+                ],
+                'groups' => [
+                    1 => [
+                        'Default',
+                    ],
                 ],
             ],
         ],
         [
             $o[0],
+            $o[1],
         ],
         []
     );
@@ -815,6 +876,110 @@ return [[
                 ],
                 'nullable' => [
                     true,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+12 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'repositoryClass' => [
+                    'App\\Repository\\SpeciesRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+13 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\OneToMany'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OneToMany')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'mappedBy' => [
+                    'specie',
+                ],
+                'targetEntity' => [
+                    'App\\Entity\\Subspecies',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+14 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'repositoryClass' => [
+                    'App\\Repository\\SubspeciesRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+15 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\OneToMany'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OneToMany')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'mappedBy' => [
+                    'subspecie',
+                ],
+                'targetEntity' => [
+                    'App\\Entity\\Parrot',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+16 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'targetEntity' => [
+                    'App\\Entity\\Species',
+                ],
+                'inversedBy' => [
+                    'subspecies',
                 ],
             ],
         ],

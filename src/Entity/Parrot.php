@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ParrotRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ParrotRepository::class)
@@ -18,9 +19,10 @@ class Parrot
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Species", inversedBy="parrot")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Subspecies", inversedBy="parrot")
+     * @Assert\NotBlank()
      */
-    private $species;
+    private $subspecie;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -42,18 +44,6 @@ class Parrot
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getSpecies(): ?string
-    {
-        return $this->species;
-    }
-
-    public function setSpecies(?string $species): self
-    {
-        $this->species = $species;
-
-        return $this;
     }
 
     public function getColor(): ?string
@@ -91,4 +81,18 @@ class Parrot
 
         return $this;
     }
+
+    public function getSubspecie(): ?Subspecies
+    {
+        return $this->subspecie;
+    }
+
+    public function setSubspecie(?Subspecies $subspecie): self
+    {
+        $this->subspecie = $subspecie;
+
+        return $this;
+    }
+
+
 }

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SubspeciesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,9 +25,19 @@ class Subspecies
     private $subspecies;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Parrot", mappedBy="subspecie")
+     */
+    private $parrot;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Species", inversedBy="subspecies")
      */
-    private $species;
+    private $specie;
+
+    public function __construct()
+    {
+        $this->parrot = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -44,15 +56,51 @@ class Subspecies
         return $this;
     }
 
-    public function getSpecies(): ?Species
+    /**
+     * @return Collection|Parrot[]
+     */
+    public function getParrot(): Collection
     {
-        return $this->species;
+        return $this->parrot;
     }
 
-    public function setSpecies(?Species $species): self
+    public function addParrot(Parrot $parrot): self
     {
-        $this->species = $species;
+        if (!$this->parrot->contains($parrot)) {
+            $this->parrot[] = $parrot;
+            $parrot->setSubspecie($this);
+        }
 
         return $this;
+    }
+
+    public function removeParrot(Parrot $parrot): self
+    {
+        if ($this->parrot->removeElement($parrot)) {
+            // set the owning side to null (unless already changed)
+            if ($parrot->getSubspecie() === $this) {
+                $parrot->setSubspecie(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getSpecie(): ?Species
+    {
+        return $this->specie;
+    }
+
+    public function setSpecie(?Species $specie): self
+    {
+        $this->specie = $specie;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->subspecies;
     }
 }

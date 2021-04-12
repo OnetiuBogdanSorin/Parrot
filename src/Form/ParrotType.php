@@ -12,6 +12,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvents;
+use Symfony\Component\Form\FormEvent;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ParrotType extends AbstractType
@@ -20,11 +22,9 @@ class ParrotType extends AbstractType
     {
         $builder
             ->add('species', EntityType::class, [
-                'class' => 'App\Entity\Species'
+                'class' => 'App\Entity\Species',
+                'mapped' => false
               ])
-            /*->add('subspecies', EntityType::class, [
-                'class' => 'App\Entity\Subspecies'
-            ])*/
             ->add('age')
             ->add('sex',  ChoiceType::class, [
                 'choices' => [
@@ -39,13 +39,30 @@ class ParrotType extends AbstractType
                 ]
             ])
         ;
+
+        $builder->get('species')->addEventListener(
+            FormEvents::POST_SUBMIT,
+            function (FormEvent $event)
+            {
+                $form = $event->getForm();
+
+                //$data = $event->getData();
+
+                //$species = $data->getSpecies();
+
+                $form->getParent()->add('subspecie', EntityType::class,[
+                        'class' => 'App\Entity\Subspecies',
+                        'choices' => $form->getData()->getSubspecies(),
+                    ]
+                );
+            }
+        );
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => Parrot::class,
-            'data_class' => Subspecies::class,
         ]);
     }
 }

@@ -68,7 +68,15 @@ class __TwigTemplate_d49558ab5340a698f1adb783c1c227a6c28591d8affc5b0917ea609577a
         echo "  <div>
     ";
         // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), 'form');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), 'form_start');
+        echo "
+      ";
+        // line 6
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), 'form');
+        echo "
+    ";
+        // line 7
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), 'form_end');
         echo "
   </div>
 ";
@@ -92,7 +100,7 @@ class __TwigTemplate_d49558ab5340a698f1adb783c1c227a6c28591d8affc5b0917ea609577a
 
     public function getDebugInfo()
     {
-        return array (  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  79 => 7,  75 => 6,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -101,7 +109,9 @@ class __TwigTemplate_d49558ab5340a698f1adb783c1c227a6c28591d8affc5b0917ea609577a
 
 {% block body %}
   <div>
-    {{ form(form) }}
+    {{ form_start(form) }}
+      {{ form(form) }}
+    {{ form_end(form) }}
   </div>
 {% endblock %}
 ", "parrot/create.html.twig", "/var/www/sites/parrot/templates/parrot/create.html.twig");

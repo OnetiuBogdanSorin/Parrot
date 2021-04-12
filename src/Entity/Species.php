@@ -25,12 +25,7 @@ class Species
     private $species;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Parrot", mappedBy="species")
-     */
-    private $parrot;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Subspecies", mappedBy="species")
+     * @ORM\OneToMany(targetEntity="App\Entity\Subspecies", mappedBy="specie")
      */
     private $subspecies;
 
@@ -38,7 +33,6 @@ class Species
     public function __construct()
     {
         $this->subspecies = new ArrayCollection();
-        $this->parrot = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -56,6 +50,13 @@ class Species
         $this->species = $species;
 
         return $this;
+    }
+
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->species;
     }
 
     /**
@@ -86,55 +87,5 @@ class Species
         }
 
         return $this;
-    }
-
-    public function getParrot(): ?self
-    {
-        return $this->parrot;
-    }
-
-    public function setParrot(?self $parrot): self
-    {
-        // unset the owning side of the relation if necessary
-        if ($parrot === null && $this->parrot !== null) {
-            $this->parrot->setParrot(null);
-        }
-
-        // set the owning side of the relation if necessary
-        if ($parrot !== null && $parrot->getParrot() !== $this) {
-            $parrot->setParrot($this);
-        }
-
-        $this->parrot = $parrot;
-
-        return $this;
-    }
-
-    public function addParrot(Species $parrot): self
-    {
-        if (!$this->parrot->contains($parrot)) {
-            $this->parrot[] = $parrot;
-            $parrot->setParrot($this);
-        }
-
-        return $this;
-    }
-
-    public function removeParrot(Species $parrot): self
-    {
-        if ($this->parrot->removeElement($parrot)) {
-            // set the owning side to null (unless already changed)
-            if ($parrot->getParrot() === $this) {
-                $parrot->setParrot(null);
-            }
-        }
-
-        return $this;
-    }
-
-    public function __toString()
-    {
-        // TODO: Implement __toString() method.
-        return $this->species;
     }
 }

@@ -2,6 +2,8 @@
 
 {% block body %}
   <div>
-    {{ form(form) }}
+    {{ form_start(form) }}
+      {{ form(form) }}
+    {{ form_end(form) }}
   </div>
 {% endblock %}
